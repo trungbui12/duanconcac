@@ -11,6 +11,10 @@ a{
     text-decoration: none;
     color: black;
 }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -191,4 +195,52 @@ header:hover {
 .footer-bottom{
     margin: 20px 0;
     text-align: center;
+}
+/* cartegory */
+.cartegory{
+    padding: 100px 0 0;
+}
+.cartegory-top{
+    margin-bottom: 50px;
+}
+.cartegory-top p{
+    font-family: var(--main-text-font);
+    margin: 0 12px;
+    font-size: 12px;
+}
+.cartegory-left{
+    width: 20%;
+}
+.cartegory-right{
+    width: 80%;
+}
+.cartegory-right-top-item:first-child{
+    flex: 2;
+    font-size: 16px;
+    font-family: var(--main-text-font);
+    font-weight: bold;
+}
+.cartegory-right-top-item{
+    flex: 1;
+    padding: 0 12px;
+
+}
+.cartegory-right-top-item button{
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between; 
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.cartegory-right-top-item select{
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between; 
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    
 }
