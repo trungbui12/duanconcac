@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="">
+        <img src="images/logo.png">
+        </a>    
+    </div>
+    <div class="menu">
+        <li><a href="">Cửa hàng</a>
+            <ul class="sub-menu">
+                <li><a href="">Bộ sưu tập</a>
+                    <ul>
+                        <li><a href="">Halloween</a></li>
+                        <li><a href="">Valentine</a></li>
+                        <li><a href="">Sweet Sets</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="">Đá quý</a>
+                    <ul>
+                        <li><a href="">Kim cương</a></li>
+                        <li><a href="">Ruby</a></li>
+                        <li><a href="">Thạch anh</a></li>
+                        <li><a href="">Ngọc lục bảo</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Kiểu dáng</a>
+                    <ul>
+                        <li><a href="">Nhẫn</a></li>
+                        <li><a href="">Vòng tay</a></li>
+                        <li><a href="">Vòng cổ</a></li>
+                        <li><a href="">Khuyên tai</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Màu sắc</a>
+                    <ul>
+                        <li><a href="">Xanh</a></li>
+                        <li><a href="">Đỏ</a></li>
+                        <li><a href="">Tím</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="">Ưu đãi</a></li>
+            <ul></ul>
+        <li><a href="">Tin tức</a></li>
+        <li><a href="">Trang sức</a></li>
+        <li><a href="">Liên hệ</a></li>
+    </div>
+    <div class="others">
+        <li><input placeholder="Tìm kiếm" type="text"><i class="fas fa-search"></i></li>
+        <li><a class="fa fa-shopping-bag" href="#"></a></li>
+    </div>
+</header>
+<section id="Slider">
+<div class="aspect-ratio-169">
+    <img src="images/slide1.jpg">
+    <img src="images/slide2.jpg">
+    <img src="images/slide3.jpg">
+    <img src="images/slide4.jpg">
+    <img src="images/slide5.jpg">
+</div>
+<div class="dot-container">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</div>
+</section> 
+<!-- app footer --> 
+<section class="app-container">
+    <hr><p>Tải ứng dụng Rock Paradise</p>
+    <div class="app-google">
+        <img src="images/appstore.png">
+        <img src="images/googleplay.png">
+    </div>
+    <p>Nhận bản tin Rock Paradise</p>
+    <input type="text" placeholder="Nhập email của bạn...">
+</section>
+<!-- footer -->
+ <div class="footer-top">
+    <li><a href=""><img src="images/dathongbao.png" alt=""></a></li>
+    <li><a href=""></a>Liên hệ</li>
+    <li><a href=""></a>Tuyển dụng</li>
+    <li><a href=""></a>Giới thiệu</li>
+    <li>
+        <a href="" class="fab fa-facebook-f"></a>
+        <a href="" class="fab fa-twitter"></a>
+        <a href="" class="fab fa-youtube"></a>
+    </li>
+ </div>
+<div class="footer-center">
+    <p>CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ QUẾ JEWELRY. GPKD số 0315436061 cấp ngày 13/12/2018 tại Sở Kế hoạch và đầu tư TP.HCM.</p>
+</div>
+<div class="footer-bottom">
+    Copyright © 2023 by Rock Paradise
+</div>
+</body>
+<script>
+    const header = document.querySelector("header")
+window.addEventListener("scroll", function(){
+    x = window.pageYOffset
+    if(x>0){
+        header.classList.add("sticky")
+    }
+    else{
+        header.classList.remove("sticky")
+    }
+})
+const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
+const imgContainer = document.querySelector('.aspect-ratio-169')
+let imgNuber = imgPosition.length
+let index = 0
+// console.log(imgPosition)
+imgPosition.forEach(function(image,index){
+    image.style.left = index*100 + "%"
+})
+function imgSlide (){
+    index++;
+    console.log(index)
+    if (index>=imgNuber) {index=0}
+    imgContainer.style.left = "-" +index*100+ "%"
+}
+setInterval(imgSlide,5000)
+
+</script>
+</html>
